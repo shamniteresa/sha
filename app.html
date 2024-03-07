@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Your Hospital Website</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: Arial, sans-serif;
+    }
+
+    .banner {
+      background-image: url("foo.jpg");
+      background-position: center;
+      background-size: cover;
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      position: relative;
+    }
+
+    .transparent-form {
+      background-color: rgba(255, 255, 255, 0.7);
+      padding: 80px;
+      border-radius: 10px;
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: flex-start;
+      position: relative;
+    }
+
+    .form-column {
+      display: flex;
+      flex-direction: column;
+      margin-right: 60px;
+    }
+
+    .form-column:last-child {
+      margin-right: 0;
+    }
+
+    .form-column input,
+    .form-column select {
+      margin-bottom: 20px;
+      padding: 12px;
+      border: none;
+      border-radius: 5px;
+      font-size: 16px;
+      color: black;
+      background-color: white;
+      width: 100%;
+    }
+
+    .form-column input::placeholder {
+      color: black;
+    }
+
+    .book-appointment-btn {
+      display: block;
+      width: 200px;
+      padding: 10px 20px;
+      background-color: #2554C7;
+      color: black;
+      font-weight: bold;
+      text-decoration: none;
+      border-radius: 5px;
+      text-align: center;
+      margin: 40px auto 0;
+      position: absolute;
+      bottom: 20px;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+  </style>
+</head>
+
+<body>
+  <div class="banner">
+    <form class="transparent-form">
+      <div class="form-column">
+        <input type="text" placeholder="First Name" name="firstname">
+        <input type="text" placeholder="Last Name" name="lastname">
+        <input type="email" placeholder="Email" name="email">
+        <input type="tel" placeholder="Phone Number" name="phonenumber">
+      </div>
+      <div class="form-column">
+        <input type="date" placeholder="Appointment Date" name="app_date">
+        <select name="doctor">
+          <option value="" disabled selected>Select Doctor</option>
+          <option value="Dr. Sreenivas">Dr. Sreenivas</option>
+          <!-- Other doctor options -->
+        </select>
+        <select name="app_time">
+          <option value="" disabled selected>Select Appointment Time</option>
+          <option value="10-10:30">10-10:30</option>
+          <!-- Other time options -->
+        </select>
+      </div>
+      <button type="button" class="book-appointment-btn">Book Appointment</button>
+    </form>
+  </div>
+</body>
+
+</html>
